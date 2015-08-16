@@ -1,0 +1,18 @@
+<h1>{{ application.company }}</h1>
+<ul>
+    {% for application in application_list %}
+        <li><a href="{% url 'applications:detail' application.id %}}/">{{ application.company }}</a>
+        	<ul>
+        		<li>{{ application.title }}</li>
+        		<li>{{ application.salary_low }}</li>
+        		<li>{{ application.salary_high }}</li>
+        		<li>{{ application.equity_low }}</li>
+        		<li>{{ application.equity_high }}</li>
+        		<li>{{ application.site_used }}</li>
+        		<li>{{ application.resume_used }}</li>
+        		<li>{{ application.cover_used }}</li>
+        		<li>{{ application.notes }}</li>
+        	</ul>	
+        </li>
+    {% endfor %}
+</ul>
