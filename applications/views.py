@@ -12,7 +12,6 @@ def index(request):
 
 #not working
 def detail(request, application_id):
-	# application = get_object_or_404(Application, pk=application_id)
-	# return render(request, 'applications/detail.html', {'application': application})
-	return render(request, 'applications/detail.html')
+	context = {'applications': application_id}
+	return render(request, 'applications/detail.html', context)
 	# return HttpResponse("You're looking at question %s." % application_id)
