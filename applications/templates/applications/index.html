@@ -1,7 +1,11 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'applications/style.css' %}" />
+
 {% if application_list %}
     <ul>
     {% for application in application_list %}
-        <li><a href="{% url 'applications:detail' application.id %}}/">{{ application.company }}</a>
+        <li><a href="/applications/{{ application.id }}/">{{ application.company }}</a>
         	<ul>
         		<li>{{ application.title }}</li>
         		<li>{{ application.salary_low }}</li>

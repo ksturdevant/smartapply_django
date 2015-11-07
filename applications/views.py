@@ -12,10 +12,7 @@ def index(request):
 
 #not working
 def detail(request, application_id):
-#	application = get_object_or_404(Application, pk=application_id)
-#	return render(request, 'applications/detail.html', {'application': application})
-	try:
-		application = Application.objects.get(pk=application_id)
-	except Application.DoesNotExist:
-		raise Http404("Application does not exist")
-	return render(request, 'applications/detail.html', {'application': application})
+	# application = get_object_or_404(Application, pk=application_id)
+	# return render(request, 'applications/detail.html', {'application': application})
+	return render(request, 'applications/detail.html')
+	# return HttpResponse("You're looking at question %s." % application_id)
