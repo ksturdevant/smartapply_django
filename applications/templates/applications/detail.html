@@ -1,1 +1,13 @@
-this is application #{{application.equity_low}}.
+@login_required 
+this is application #{{application.company}}.
+            <ul>
+                <li>{{ application.title }}</li>
+                <li>{{ application.salary_low }}</li>
+                <li>{{ application.salary_high }}</li>
+                <li>{{ application.equity_low }}</li>
+                <li>{{ application.equity_high }}</li>
+                <li>{{ application.site_used }}</li>
+                <li>{{ application.resume_used }}</li>
+                <li>{{ application.cover_used }}</li>
+                <li>{{ application.notes }}</li>
+            </ul>   
